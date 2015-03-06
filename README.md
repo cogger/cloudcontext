@@ -8,6 +8,7 @@ cloudcontext adds the cloud context to the context.  There are also functions fo
 package main
 
 import (
+	"log"
 	"net/http"
 	"github.com/cogger/cogger"
 	"github.com/cogger/cloudcontext"
@@ -29,6 +30,7 @@ func init() {
 	fooHandler.SetHandler(foo)
 
   	http.Handle("/foo", fooHandler)
+  	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 ~~~

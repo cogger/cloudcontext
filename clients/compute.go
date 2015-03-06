@@ -9,13 +9,11 @@ import (
 )
 
 //Compute adds the compute authenticated client to the context
-func Compute(scopes ...string) func(context.Context, *http.Request) context.Context {
-	return func(ctx context.Context, req *http.Request) context.Context {
-		client := &http.Client{
-			Transport: &oauth2.Transport{
-				Source: google.ComputeTokenSource(""),
-			},
-		}
-		return context.WithValue(ctx, &http.Client{}, client)
+func Compute(ctx context.Context, req *http.Request) context.Context {
+	client := &http.Client{
+		Transport: &oauth2.Transport{
+			Source: google.ComputeTokenSource(""),
+		},
 	}
+	return context.WithValue(ctx, &http.Client{}, client)
 }
