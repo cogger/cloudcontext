@@ -1,6 +1,6 @@
-# googlecontext [![GoDoc](https://godoc.org/github.com/cogger/googlecontext?status.png)](http://godoc.org/github.com/cogger/googlecontext)
+# cloudcontext [![GoDoc](https://godoc.org/github.com/cogger/cloudcontext?status.png)](http://godoc.org/github.com/cogger/cloudcontext)
 
-gae addes the appengine context to the httpHandler
+cloudcontext adds the cloud context to the context.  There are also functions for adding authenticated http.Client to the context.  
 
 ## Usage
 ~~~ go
