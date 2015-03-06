@@ -25,8 +25,7 @@ func foo(ctx context.Context, w http.ResponseWriter, r *http.Request) int{
 
 func init() {
 	fooHandler := cogger.NewHandler()
-	fooHandler.AddContext(client.Compute)
-	fooHandler.AddContext(cloudcontext.Add)
+	fooHandler.AddContext(client.Compute, cloudcontext.Add)
 	fooHandler.SetHandler(foo)
 
   	http.Handle("/foo", fooHandler)
