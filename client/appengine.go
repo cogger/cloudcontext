@@ -22,6 +22,7 @@ func Appengine(scopes ...string) func(context.Context, *http.Request) context.Co
 				},
 			},
 		}
-		return context.WithValue(ctx, &http.Client{}, client)
+
+		return context.WithValue(ctx, clientKey{}, client)
 	}
 }

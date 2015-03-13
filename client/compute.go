@@ -15,5 +15,5 @@ func Compute(ctx context.Context, req *http.Request) context.Context {
 			Source: google.ComputeTokenSource(""),
 		},
 	}
-	return context.WithValue(ctx, &http.Client{}, client)
+	return context.WithValue(ctx, clientKey{}, client)
 }
