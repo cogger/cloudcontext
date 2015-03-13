@@ -23,7 +23,7 @@ func FromContext(ctx context.Context) *bigquery.Service {
 	}).(*bigquery.Service)
 
 	if !ok {
-		panic(errNoBigQuery)
+		panic(ErrNoBigQuery)
 	}
 	return service
 }

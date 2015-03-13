@@ -23,7 +23,6 @@ func foo(ctx context.Context, w http.ResponseWriter, r *http.Request) int{
 	return http.StatusOK
 }
 
-
 func init() {
 	fooHandler := cogger.NewHandler()
 	fooHandler.AddContext(client.Compute, cloudcontext.Add)
@@ -32,5 +31,4 @@ func init() {
   	http.Handle("/foo", fooHandler)
   	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
 ~~~

@@ -15,9 +15,9 @@ func Appengine(scopes ...string) func(context.Context, *http.Request) context.Co
 	return func(ctx context.Context, req *http.Request) context.Context {
 		client := &http.Client{
 			Transport: &oauth2.Transport{
-				Source: google.AppEngineTokenSource(gaeContext, scopes...),
+				Source: google.AppEngineTokenSource(ctx, scopes...),
 				Base: &urlfetch.Transport{
-					Context:  gaeContext,
+					Context:  ctx,
 					Deadline: 30 * time.Second,
 				},
 			},
