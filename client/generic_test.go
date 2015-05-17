@@ -12,7 +12,7 @@ import (
 )
 
 var _ = Describe("Generic", func() {
-	It("should return a client with ", func() {
+	It("should return a client", func() {
 		req, err := http.NewRequest("GET", "/", nil)
 		Expect(err).ToNot(HaveOccurred())
 		ctx := Generic(&oauth2.Config{})(context.Background(), req)
