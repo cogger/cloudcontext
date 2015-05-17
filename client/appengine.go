@@ -1,3 +1,5 @@
+// +build appengine appenginevm
+
 package client
 
 import (

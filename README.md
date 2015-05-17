@@ -1,4 +1,8 @@
-# cloudcontext [![GoDoc](https://godoc.org/github.com/cogger/cloudcontext?status.png)](http://godoc.org/github.com/cogger/cloudcontext)
+# cloudcontext 
+
+**Documentation:** [![GoDoc](https://godoc.org/github.com/cogger/cloudcontext?status.png)](http://godoc.org/github.com/cogger/cloudcontext)  
+**Build Status:** [![Build Status](https://travis-ci.org/cogger/cloudcontext.svg?branch=master)](https://travis-ci.org/cogger/cloudcontext)  
+**Test Coverage:** [![Coverage Status](https://coveralls.io/repos/cogger/cloudcontext/badge.svg?branch=master)](https://coveralls.io/r/cogger/cloudcontext?branch=master)
 
 cloudcontext adds the cloud context to the context.  There are also functions for adding authenticated http.Client to the context.  
 
