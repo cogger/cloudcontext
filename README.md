@@ -16,7 +16,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"github.com/cogger/cogger"
+	"gopkg.in/cogger/cogger.v1"
 	"github.com/cogger/cloudcontext"
 	"github.com/cogger/cloudcontext/client"
 	"github.com/cogger/cloudcontext/bq"
