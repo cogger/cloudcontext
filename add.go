@@ -3,9 +3,9 @@ package cloudcontext
 import (
 	"net/http"
 
-	"github.com/cogger/cloudcontext/client"
 	"golang.org/x/net/context"
 	"google.golang.org/cloud"
+	"gopkg.in/cogger/cloudcontext.v1/client"
 )
 
 //Add adds the cloud context to the context

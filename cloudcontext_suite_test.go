@@ -1,4 +1,4 @@
-package cloudcontext_test
+package cloudcontext
 
 import (
 	. "github.com/onsi/ginkgo"

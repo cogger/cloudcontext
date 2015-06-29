@@ -1,17 +1,15 @@
-package cloudcontext_test
+package cloudcontext
 
 import (
 	"reflect"
 
-	. "github.com/cogger/cloudcontext"
-
 	"net/http"
 
-	"github.com/cogger/cloudcontext/client"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
+	"gopkg.in/cogger/cloudcontext.v1/client"
 )
 
 var _ = Describe("Add", func() {

@@ -1,9 +1,8 @@
-package client_test
+package client
 
 import (
 	"net/http"
 
-	. "github.com/cogger/cloudcontext/client"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
 

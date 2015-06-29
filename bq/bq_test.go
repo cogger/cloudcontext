@@ -1,17 +1,16 @@
-package bq_test
+package bq
 
 import (
 	"log"
 	"net/http"
 
-	"github.com/cogger/cloudcontext"
-	. "github.com/cogger/cloudcontext/bq"
-	"github.com/cogger/cloudcontext/client"
+	"gopkg.in/cogger/cloudcontext.v1/client"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
+	"gopkg.in/cogger/cloudcontext.v1"
 )
 
 var _ = Describe("Bq", func() {

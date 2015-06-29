@@ -1,9 +1,8 @@
-package client_test
+package client
 
 import (
 	"net/http"
 
-	. "github.com/cogger/cloudcontext/client"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"golang.org/x/net/context"
