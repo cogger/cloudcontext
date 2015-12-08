@@ -27,3 +27,15 @@ func FromContext(ctx context.Context) *bigquery.Service {
 	}
 	return service
 }
+
+func FromContextSafe(ctx context.Context) (*bigquery.Service, error) {
+	service, ok := internal.Service(ctx, "bigquery", func(hc *http.Client) interface{} {
+		svc, _ := bigquery.New(hc)
+		return svc
+	}).(*bigquery.Service)
+
+	if !ok {
+		return nil, ErrNoBigQuery
+	}
+	return service, nil
+}

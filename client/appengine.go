@@ -4,7 +4,6 @@ package client
 
 import (
 	"net/http"
-	"time"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
@@ -18,10 +17,7 @@ func Appengine(scopes ...string) func(context.Context, *http.Request) context.Co
 		client := &http.Client{
 			Transport: &oauth2.Transport{
 				Source: google.AppEngineTokenSource(ctx, scopes...),
-				Base: &urlfetch.Transport{
-					Context:  ctx,
-					Deadline: 30 * time.Second,
-				},
+				Base: &urlfetch.Transport{Context:  ctx},
 			},
 		}
 
